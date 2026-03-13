@@ -1,27 +1,32 @@
 body{
     font-family: Arial;
-    background-color: #f4f4f4;
     margin: 0;
+    background: linear-gradient(120deg, #ff7b00), #ff0066, #6a00ff;
+    color: white;
 }
 
 header{
-    background: linear-gradient(90deg, orange, red, purple);
-    color: white;
     text-align: center;
-    padding: 20px;
+    padding: 25px;
+}
+
+#searchbar{
+    padding: 10px;
+    width: 250px;
+    border-radius: 10px;
+    border: none;
 }
 
 nav{
     text-align: center;
-    background: blue;
+    background: black;
     padding: 15px;
 }
 
 nav a{
     color: white;
-    text-decoration: none;
     margin: 15px;
-    font-size: 18px;
+    text-decoration: dashed;
     font-weight: bold;
 }
 
@@ -35,34 +40,39 @@ section{
 
 .product{
     display: flex;
-    align-items: center;
     background: white;
+    color: black;
+    margin: 20px;
     padding: 15px;
-    margin: 15px;
     border-radius: 10px;
 }
 
 .product img{
-    width: 200px;
+    width: 180px;
     margin-right: 20px;
 }
 
 .price{
-    color: green;
     font-size: 20px;
+    color: green;
     font-weight: bold;
 }
 
-.history{
-    background: #fff3cd;
-    padding: 20px;
-    border-radius: 10px;
-    margin: 20px;
+button{
+    background: red;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover{
+    background: darkred;
 }
 
 footer{
-    text-align: center;
     background: black;
-    color: white;
+    text-align: center;
     padding: 15px;
 }
