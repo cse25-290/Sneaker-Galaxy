@@ -10,8 +10,14 @@
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  color: #ff3333;           /* red text */
-  background: #00072b;      /* deep navy */
+  color: #ff3333;
+
+  background-image: url("jordan6.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
   min-height: 100vh;
 }
 
