@@ -139,6 +139,7 @@ button:hover {
   padding: 20px;
   width: 180px;
   border-radius: 8px;
+  justify-content: center;
   border: 1px solid #ff3333;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
