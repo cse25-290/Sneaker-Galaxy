@@ -1,160 +1,235 @@
-body{
-  margin:0;
-  font-family:Arial, sans-serif;
-  background: url("jordan6.jpg") no-repeat center center fixed;
-  background-size: cover;
-  color:white;
-}
-header{
-  background:#000;
-  padding:15px;
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url("jordan6.jpg") no-repeat center center fixed;
+    background-size: cover;
+    color: white;
 }
 
-.top-bar{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
+/* HEADER */
+header {
+    background: #000;
+    padding: 15px;
 }
 
-.logo{
-  font-size:24px;
-  font-weight:bold;
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-.sneaker{
-  color:#00d9ff;
+/* LOGO */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
 }
 
-.galaxy{
-  color:#ff00ff;
+.sneaker {
+    color: #00d9ff;
 }
 
-.search-bar input{
-  padding:8px;
-  border-radius:5px;
-  border:none;
+.galaxy {
+    color: #ff00ff;
 }
 
-nav ul{
-  display:flex;
-  gap:20px;
-  list-style:none;
-  padding:0;
+/* SEARCH BAR */
+.search-bar input {
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
 }
 
-nav a{
-  color:white;
-  text-decoration:none;
+/* NAVIGATION */
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 10px 0 0;
+    margin: 0;
+    flex-wrap: wrap;
 }
 
-.hero{
-  text-align:center;
-  padding:80px 20px;
-  background:linear-gradient(to right,#1a1a1a,#222);
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
 }
 
-.hero button{
-  padding:12px 25px;
-  border:none;
-  background:#00d9ff;
-  color:black;
-  font-weight:bold;
-  border-radius:8px;
-  cursor:pointer;
-}
-.brands{
-  margin-top: 30px;
+nav a:hover {
+    color: #00d9ff;
 }
 
-.brands ul{
-  list-style: square;
-  padding-left: 20px;
+/* HERO SECTION */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(to right, #1a1a1a, #222);
 }
 
-.quality{
-  margin-top: 30px;
-  background-color: #111;
-  color: white;
-  padding: 20px;
-  border-radius: 8px;
-
-.section{
-  padding:40px 20px;
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
 }
 
-.products{
-  display:flex;
-  gap:20px;
-  flex-wrap:wrap;
+.hero button {
+    padding: 12px 25px;
+    border: none;
+    background: #00d9ff;
+    color: black;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-.product-card{
-  background:#222;
-  padding:20px;
-  border-radius:10px;
-  width:220px;
-  box-shadow:0 0 10px rgba(0,0,0,0.5);
+.hero button:hover {
+    background: #00b5d6;
 }
 
-.product-card button{
-  margin-top:10px;
-  padding:10px;
-  border:none;
-  background:#ff00ff;
-  color:white;
-  border-radius:6px;
-  cursor:pointer;
+/* BRANDS */
+.brands {
+    margin-top: 30px;
 }
 
-.tabs{
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
-  margin-bottom:20px;
+.brands ul {
+    list-style: square;
+    padding-left: 20px;
 }
 
-.tab-button{
-  padding:10px 20px;
-  border:none;
-  background:#333;
-  color:white;
-  cursor:pointer;
-  border-radius:6px;
-  transition:0.3s;
+/* QUALITY SECTION */
+.quality {
+    margin-top: 30px;
+    background-color: #111;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
 }
 
-.tab-button:hover{
-  background:#555;
+/* GENERAL SECTION */
+.section {
+    padding: 40px 20px;
 }
 
-.tab-button.active{
-  background:#00d9ff;
-  color:black;
+/* PRODUCTS */
+.products {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.tab-content{
-  display:none;
-  background:#1c1c1c;
-  padding:20px;
-  border-radius:10px;
+/* PRODUCT CARD */
+.product-card {
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    width: 220px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s;
 }
 
-.tab-content.active{
-  display:block;
+.product-card:hover {
+    transform: translateY(-5px);
 }
 
-.shoe-img{
-  width:100%;
-  max-width:200px;
-  height:auto;
-  border-radius:10px;
-  margin-top:15px;
-  margin-bottom:10px;
-  display:block;
+.product-card button {
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    background: #ff00ff;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    transition: 0.3s;
 }
 
-footer{
-  text-align:center;
-  padding:20px;
-  background:#000;
+.product-card button:hover {
+    background: #d600d6;
+}
+
+/* TABS */
+.tabs {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    padding: 10px 20px;
+    border: none;
+    background: #333;
+    color: white;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.tab-button:hover {
+    background: #555;
+}
+
+.tab-button.active {
+    background: #00d9ff;
+    color: black;
+}
+
+/* TAB CONTENT */
+.tab-content {
+    display: none;
+    background: rgba(28, 28, 28, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* SHOE IMAGES */
+.shoe-img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #000;
+    margin-top: 40px;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+
+    .top-bar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .products {
+        justify-content: center;
+    }
+
+    .product-card {
+        width: 90%;
+        max-width: 300px;
+    }
 }
