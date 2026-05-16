@@ -4,3 +4,169 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Nike</title>
+</head>
+
+<body>
+
+    <header>
+
+          <div class="logo">
+        🚀 <span class="sneaker">Sneaker</span>
+        <span class="galaxy">Galaxy</span>
+      </div>
+
+      <div class="search-bar">
+        <input type="text" placeholder="Search sneakers...">
+      </div>
+
+      <div>
+        <button onclick="openCart()">🛒 Cart</button>
+      </div>
+
+    </div>
+
+    <section>
+
+      <!-- NIKE -->
+  <div id="nike" class="tab-content active">
+
+    <div class="product-card">
+
+      <h2>Nike</h2>
+
+      <p><strong>Founded:</strong> 1964</p>
+
+      <p><strong>Founders:</strong>
+        Phil Knight & Bill Bowerman
+      </p>
+
+      <p><strong>Popular Sneakers:</strong>
+        Air Force 1, Air Max, Air Jordan
+      </p>
+
+      <p>
+        Nike is one of the world's biggest sportswear brands.
+      </p>
+
+      <h3>In Stock</h3>
+
+      <!-- Nike Air Force 1 -->
+        <img src="images/airforce1.jpg" class="shoe-img">
+        <p>Nike Air Force 1 - P1500</p>
+
+        <label>Choose Color:</label>
+        <select id="af1-color">
+        <option value="White">White</option>
+        <option value="Black">Black</option>
+        <option value="Triple White">Triple White</option>
+        </select>
+
+        <button onclick="addToCart('Nike Air Force 1',1500, document.getElementById('af1-color').value)">
+        Add to Cart
+        </button>
+
+
+        <!-- Nike Air Max 90 -->
+        <img src="images/airmax90.jpg" class="shoe-img">
+        <p>Nike Air Max 90 - P1700</p>
+
+        <label>Choose Color:</label>
+        <select id="airmax90-color">
+        <option value="White/Red">White/Red</option>
+        <option value="Black">Black</option>
+        <option value="Grey">Grey</option>
+        </select>
+
+        <button onclick="addToCart('Nike Air Max 90',1700, document.getElementById('airmax90-color').value)">
+        Add to Cart
+        </button>
+
+
+        <!-- Nike Air Jordan 1 -->
+        <img src="images/airjordan1.jpg" class="shoe-img">
+        <p>Nike Air Jordan 1 - P2200</p>
+
+        <label>Choose Color:</label>
+        <select id="aj1-color">
+        <option value="Bred">Bred</option>
+        <option value="Chicago">Chicago</option>
+        <option value="Black/White">Black/White</option>
+        </select>
+
+        <button onclick="addToCart('Nike Air Jordan 1',2200, document.getElementById('aj1-color').value)">
+        Add to Cart
+        </button>
+
+
+        <!-- Nike Dunk Low -->
+        <img src="images/dunklow.jpg" class="shoe-img">
+        <p>Nike Dunk Low - P2000</p>
+
+        <label>Choose Color:</label>
+        <select id="dunk-color">
+        <option value="Panda">Black/White (Panda)</option>
+        <option value="University Blue">University Blue</option>
+        <option value="Grey Fog">Grey Fog</option>
+        </select>
+
+        <button onclick="addToCart('Nike Dunk Low',2000, document.getElementById('dunk-color').value)">
+        Add to Cart
+        </button>
+
+
+        <!-- Nike React Infinity Run -->
+        <img src="images/reactinfinity.jpg" class="shoe-img">
+        <p>Nike React Infinity Run - P2100</p>
+
+        <label>Choose Color:</label>
+        <select id="react-color">
+        <option value="Black">Black</option>
+        <option value="White">White</option>
+        <option value="Blue">Blue</option>
+        </select>
+
+        <button onclick="addToCart('Nike React Infinity Run',2100, document.getElementById('react-color').value)">
+        Add to Cart
+        </button>
+
+
+        <!-- Nike Pegasus 40 -->
+        <img src="images/pegasus40.jpg" class="shoe-img">
+        <p>Nike Pegasus 40 - P1900</p>
+
+        <label>Choose Color:</label>
+        <select id="pegasus-color">
+        <option value="Grey">Grey</option>
+        <option value="Black">Black</option>
+        <option value="Volt">Volt</option>
+        </select>
+
+        <button onclick="addToCart('Nike Pegasus 40',1900, document.getElementById('pegasus-color').value)">
+        Add to Cart
+        </button>
+
+
+        <!-- Nike Blazer Mid '77 -->
+        <img src="images/blazermid77.jpg" class="shoe-img">
+        <p>Nike Blazer Mid '77 - P1800</p>
+
+        <label>Choose Color:</label>
+        <select id="blazer-color">
+        <option value="White">White</option>
+        <option value="Black">Black</option>
+        <option value="Vintage">Vintage</option>
+        </select>
+
+        <button onclick="addToCart('Nike Blazer Mid 77',1800, document.getElementById('blazer-color').value)">
+        Add to Cart
+        </button>
+
+    </div>
+
+  </div>
+  
+    </section>
+    </header>
+</body>
