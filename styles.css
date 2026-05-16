@@ -62,24 +62,21 @@ nav a{
   border-radius:8px;
   cursor:pointer;
 }
+.brands{
+  margin-top: 30px;
+}
 
-        }
+.brands ul{
+  list-style: square;
+  padding-left: 20px;
+}
 
-        .brands{
-            margin-top: 30px;
-        }
-
-        .brands ul{
-            list-style: square;
-            padding-left: 20px;
-        }
-
-        .quality{
-            margin-top: 30px;
-            background-color: #111;
-            color: white;
-            padding: 20px;
-            border-radius: 8px;
+.quality{
+  margin-top: 30px;
+  background-color: #111;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
 
 .section{
   padding:40px 20px;
