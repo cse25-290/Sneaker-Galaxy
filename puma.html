@@ -1,1 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Puma</title>
+</head>
+
+<body>
+
+    <header>
+
+         <div class="logo">
+        🚀 <span class="sneaker">Sneaker</span>
+        <span class="galaxy">Galaxy</span>
+      </div>
+
+      <div class="search-bar">
+        <input type="text" placeholder="Search sneakers...">
+      </div>
+
+      <div>
+        <button onclick="openCart()">🛒 Cart</button>
+      </div>
+
+    </div>
+
+    <section>
+
+        <!-- PUMA -->
+<div id="puma" class="tab-content">
+
+  <div class="product-card">
+
+    <h3>Puma</h3>
+
+    <p><strong>Founded:</strong> 1948</p>
+
+    <p><strong>Founder:</strong> Rudolf Dassler</p>
+
+    <p><strong>Popular Sneakers:</strong>
+      RS-X, Suede Classic, Future Rider, Clyde
+    </p>
+
+    <p>
+      Puma combines performance and fashion culture.
+    </p>
+
+    <h4>In Stock</h4>
+
+    <!-- Puma RS-X -->
+    <img src="images/rsx.jpg" class="shoe-img">
+    <p>Puma RS-X - P1300</p>
+
+    <label>Choose Color:</label>
+    <select id="rsx-color">
+      <option value="White/Blue">White/Blue</option>
+      <option value="Black/Red">Black/Red</option>
+      <option value="Triple White">Triple White</option>
+    </select>
+
+    <button onclick="addToCart('Puma RS-X',1300, document.getElementById('rsx-color').value)">
+      Add to Cart
+    </button>
+
+
+    <!-- Puma Suede Classic -->
+    <img src="images/suedeclassic.jpg" class="shoe-img">
+    <p>Puma Suede Classic - P1200</p>
+
+    <label>Choose Color:</label>
+    <select id="suede-color">
+      <option value="Black/White">Black/White</option>
+      <option value="Red/White">Red/White</option>
+      <option value="Blue/White">Blue/White</option>
+    </select>
+
+    <button onclick="addToCart('Puma Suede Classic',1200, document.getElementById('suede-color').value)">
+      Add to Cart
+    </button>
+
+
+    <!-- Puma Future Rider -->
+    <img src="images/futurerider.jpg" class="shoe-img">
+    <p>Puma Future Rider - P1500</p>
+
+    <label>Choose Color:</label>
+    <select id="rider-color">
+      <option value="Grey/Orange">Grey/Orange</option>
+      <option value="Blue/White">Blue/White</option>
+      <option value="Black">Black</option>
+    </select>
+
+    <button onclick="addToCart('Puma Future Rider',1500, document.getElementById('rider-color').value)">
+      Add to Cart
+    </button>
+
+
+    <!-- Puma Clyde -->
+    <img src="images/clyde.jpg" class="shoe-img">
+    <p>Puma Clyde - P1400</p>
+
+    <label>Choose Color:</label>
+    <select id="clyde-color">
+      <option value="Black">Black</option>
+      <option value="White">White</option>
+      <option value="Green">Green</option>
+    </select>
+
+    <button onclick="addToCart('Puma Clyde',1400, document.getElementById('clyde-color').value)">
+      Add to Cart
+    </button>
+
+  </div>
+
+</div>
+    </section>
+    </header>
+</body>
