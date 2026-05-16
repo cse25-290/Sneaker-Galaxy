@@ -2,124 +2,163 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Balance</title>
 
-  <title>New Balance</title>
-
-  <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
+    <!-- HEADER -->
     <header>
 
-         <div class="logo">
-        🚀 <span class="sneaker">Sneaker</span>
-        <span class="galaxy">Galaxy</span>
-      </div>
+        <div class="top-bar">
 
-      <div class="search-bar">
-        <input type="text" placeholder="Search sneakers...">
-      </div>
+            <div class="logo">
+                🚀 <span class="sneaker">Sneaker</span>
+                <span class="galaxy">Galaxy</span>
+            </div>
 
-      <div>
-        <button onclick="openCart()">🛒 Cart</button>
-      </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search sneakers...">
+            </div>
 
-    </div>
+            <div>
+                <button onclick="openCart()">🛒 Cart</button>
+            </div>
 
-    <section>
+        </div>
 
-        <!-- NEW BALANCE -->
-<div id="newbalance" class="tab-content">
-
-  <div class="product-card">
-
-    <h3>New Balance</h3>
-
-    <p><strong>Founded:</strong> 1906</p>
-
-    <p><strong>Founder:</strong>
-      William J. Riley
-    </p>
-
-    <p><strong>Popular Sneakers:</strong>
-      990 Series, 574, 550, 2002R
-    </p>
-
-    <p>
-      New Balance is known for comfort and quality.
-    </p>
-
-    <h4>In Stock</h4>
-
-    <!-- New Balance 574 -->
-    <img src="images/nb574.jpg" class="shoe-img">
-    <p>New Balance 574 - P1800</p>
-
-    <label>Choose Color:</label>
-    <select id="nb574-color">
-      <option value="Grey">Grey</option>
-      <option value="Navy">Navy</option>
-      <option value="Black">Black</option>
-    </select>
-
-    <button onclick="addToCart('New Balance 574',1800, document.getElementById('nb574-color').value)">
-      Add to Cart
-    </button>
-
-
-    <!-- New Balance 990 -->
-    <img src="images/nb990.jpg" class="shoe-img">
-    <p>New Balance 990 - P2200</p>
-
-    <label>Choose Color:</label>
-    <select id="nb990-color">
-      <option value="Grey">Grey</option>
-      <option value="Black">Black</option>
-      <option value="Navy">Navy</option>
-    </select>
-
-    <button onclick="addToCart('New Balance 990',2200, document.getElementById('nb990-color').value)">
-      Add to Cart
-    </button>
-
-
-    <!-- New Balance 550 -->
-    <img src="images/nb550.jpg" class="shoe-img">
-    <p>New Balance 550 - P2000</p>
-
-    <label>Choose Color:</label>
-    <select id="nb550-color">
-      <option value="White/Green">White/Green</option>
-      <option value="White/Red">White/Red</option>
-      <option value="White/Blue">White/Blue</option>
-    </select>
-
-    <button onclick="addToCart('New Balance 550',2000, document.getElementById('nb550-color').value)">
-      Add to Cart
-    </button>
-
-
-    <!-- New Balance 2002R -->
-    <img src="images/nb2002r.jpg" class="shoe-img">
-    <p>New Balance 2002R - P2400</p>
-
-    <label>Choose Color:</label>
-    <select id="nb2002r-color">
-      <option value="Rain Cloud">Rain Cloud</option>
-      <option value="Black">Black</option>
-      <option value="Protection Pack">Protection Pack</option>
-    </select>
-
-    <button onclick="addToCart('New Balance 2002R',2400, document.getElementById('nb2002r-color').value)">
-      Add to Cart
-    </button>
-
-  </div>
-
-</div>
-    </section>
     </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+        <!-- NEW BALANCE SECTION -->
+        <section id="newbalance" class="tab-content">
+
+            <div class="product-card">
+
+                <h3>New Balance</h3>
+
+                <p><strong>Founded:</strong> 1906</p>
+
+                <p>
+                    <strong>Founder:</strong>
+                    William J. Riley
+                </p>
+
+                <p>
+                    <strong>Popular Sneakers:</strong>
+                    990 Series, 574, 550, 2002R
+                </p>
+
+                <p>
+                    New Balance is known for comfort and quality.
+                </p>
+
+                <h4>In Stock</h4>
+
+                <!-- New Balance 574 -->
+                <div class="product">
+
+                    <img src="images/nb574.jpg"
+                         alt="New Balance 574"
+                         class="shoe-img">
+
+                    <p>New Balance 574 - P1800</p>
+
+                    <label for="nb574-color">Choose Color:</label>
+
+                    <select id="nb574-color">
+                        <option value="Grey">Grey</option>
+                        <option value="Navy">Navy</option>
+                        <option value="Black">Black</option>
+                    </select>
+
+                    <button onclick="addToCart('New Balance 574', 1800, document.getElementById('nb574-color').value)">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+                <!-- New Balance 990 -->
+                <div class="product">
+
+                    <img src="images/nb990.jpg"
+                         alt="New Balance 990"
+                         class="shoe-img">
+
+                    <p>New Balance 990 - P2200</p>
+
+                    <label for="nb990-color">Choose Color:</label>
+
+                    <select id="nb990-color">
+                        <option value="Grey">Grey</option>
+                        <option value="Black">Black</option>
+                        <option value="Navy">Navy</option>
+                    </select>
+
+                    <button onclick="addToCart('New Balance 990', 2200, document.getElementById('nb990-color').value)">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+                <!-- New Balance 550 -->
+                <div class="product">
+
+                    <img src="images/nb550.jpg"
+                         alt="New Balance 550"
+                         class="shoe-img">
+
+                    <p>New Balance 550 - P2000</p>
+
+                    <label for="nb550-color">Choose Color:</label>
+
+                    <select id="nb550-color">
+                        <option value="White/Green">White/Green</option>
+                        <option value="White/Red">White/Red</option>
+                        <option value="White/Blue">White/Blue</option>
+                    </select>
+
+                    <button onclick="addToCart('New Balance 550', 2000, document.getElementById('nb550-color').value)">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+                <!-- New Balance 2002R -->
+                <div class="product">
+
+                    <img src="images/nb2002r.jpg"
+                         alt="New Balance 2002R"
+                         class="shoe-img">
+
+                    <p>New Balance 2002R - P2400</p>
+
+                    <label for="nb2002r-color">Choose Color:</label>
+
+                    <select id="nb2002r-color">
+                        <option value="Rain Cloud">Rain Cloud</option>
+                        <option value="Black">Black</option>
+                        <option value="Protection Pack">Protection Pack</option>
+                    </select>
+
+                    <button onclick="addToCart('New Balance 2002R', 2400, document.getElementById('nb2002r-color').value)">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
 </body>
+
+</html>
