@@ -35,3 +35,22 @@ function completePurchase() {
   document.getElementById("cartItems").innerHTML = "";
   document.getElementById("total").textContent = "0";
 }
+
+function openBrand(event, brandName) {
+
+  let tabContents = document.getElementsByClassName("tab-content");
+
+  for (let i = 0; i < tabContents.length; i++) {
+    tabContents[i].classList.remove("active");
+  }
+
+  let tabButtons = document.getElementsByClassName("tab-button");
+
+  for (let i = 0; i < tabButtons.length; i++) {
+    tabButtons[i].classList.remove("active");
+  }
+
+  document.getElementById(brandName).classList.add("active");
+
+  event.currentTarget.classList.add("active");
+}
