@@ -4,125 +4,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Adidas</title>
 
     <link rel="stylesheet" href="styles.css">
-    
 </head>
 
 <body>
 
-     <!-- HEADER -->
-  <header>
+    <!-- HEADER -->
+    <header>
+        <div class="top-bar">
 
-    <div class="top-bar">
+            <div class="logo">
+                🚀 <span class="sneaker">Sneaker</span>
+                <span class="galaxy">Galaxy</span>
+            </div>
 
-      <div class="logo">
-        🚀 <span class="sneaker">Sneaker</span>
-        <span class="galaxy">Galaxy</span>
-      </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search sneakers...">
+            </div>
 
-      <div class="search-bar">
-        <input type="text" placeholder="Search sneakers...">
-      </div>
+            <div>
+                <button onclick="openCart()">🛒 Cart</button>
+            </div>
 
-      <div>
-        <button onclick="openCart()">🛒 Cart</button>
-      </div>
+        </div>
+    </header>
 
-    </div>
+    <!-- MAIN CONTENT -->
+    <main>
 
-    <section>
+        <!-- Adidas Section -->
+        <section id="adidas" class="tab-content">
 
-        <!-- Adidas -->
-    <div id="adidas" class="tab-content">
+            <div class="product-card">
 
-  <div class="product-card">
+                <h3>Adidas</h3>
 
-    <h3>Adidas</h3>
+                <p><strong>Founded:</strong> 1949</p>
+                <p><strong>Founder:</strong> Adolf Dassler</p>
 
-    <p><strong>Founded:</strong> 1949</p>
-    <p><strong>Founder:</strong> Adolf Dassler</p>
+                <p>
+                    <strong>Popular Sneakers:</strong>
+                    Superstar, Stan Smith, Yeezy, Ultraboost
+                </p>
 
-    <p><strong>Popular Sneakers:</strong>
-      Superstar, Stan Smith, Yeezy, Ultraboost
-    </p>
+                <p>
+                    Adidas is famous for sportswear and street fashion.
+                </p>
 
-    <p>
-      Adidas is famous for sportswear and street fashion.
-    </p>
+                <h4>In Stock</h4>
 
-    <h4>In Stock</h4>
+                <!-- Adidas Superstar -->
+                <div class="product">
+                    <img src="images/superstar.jpg" alt="Adidas Superstar" class="shoe-img">
 
-    <!-- Adidas Superstar -->
-    <img src="images/superstar.jpg" class="shoe-img">
-    <p>Adidas Superstar - P1400</p>
+                    <p>Adidas Superstar - P1400</p>
 
-    <label>Choose Color:</label>
-    <select id="superstar-color">
-      <option value="White/Black">White/Black</option>
-      <option value="Black/White">Black/White</option>
-      <option value="Triple White">Triple White</option>
-    </select>
+                    <label for="superstar-color">Choose Color:</label>
 
-    <button onclick="addToCart('Adidas Superstar',1400, document.getElementById('superstar-color').value)">
-      Add to Cart
-    </button>
+                    <select id="superstar-color">
+                        <option value="White/Black">White/Black</option>
+                        <option value="Black/White">Black/White</option>
+                        <option value="Triple White">Triple White</option>
+                    </select>
 
+                    <button onclick="addToCart('Adidas Superstar', 1400, document.getElementById('superstar-color').value)">
+                        Add to Cart
+                    </button>
+                </div>
 
-    <!-- Adidas Stan Smith -->
-    <img src="images/stansmith.jpg" class="shoe-img">
-    <p>Adidas Stan Smith - P1600</p>
+                <!-- Adidas Stan Smith -->
+                <div class="product">
+                    <img src="images/stansmith.jpg" alt="Adidas Stan Smith" class="shoe-img">
 
-    <label>Choose Color:</label>
-    <select id="stansmith-color">
-      <option value="White/Green">White/Green</option>
-      <option value="White/Navy">White/Navy</option>
-      <option value="Triple White">Triple White</option>
-    </select>
+                    <p>Adidas Stan Smith - P1600</p>
 
-    <button onclick="addToCart('Adidas Stan Smith',1600, document.getElementById('stansmith-color').value)">
-      Add to Cart
-    </button>
+                    <label for="stansmith-color">Choose Color:</label>
 
+                    <select id="stansmith-color">
+                        <option value="White/Green">White/Green</option>
+                        <option value="White/Navy">White/Navy</option>
+                        <option value="Triple White">Triple White</option>
+                    </select>
 
-    <!-- Adidas Ultraboost -->
-    <img src="images/ultraboost.jpg" class="shoe-img">
-    <p>Adidas Ultraboost - P2200</p>
+                    <button onclick="addToCart('Adidas Stan Smith', 1600, document.getElementById('stansmith-color').value)">
+                        Add to Cart
+                    </button>
+                </div>
 
-    <label>Choose Color:</label>
-    <select id="ultraboost-color">
-      <option value="Black">Black</option>
-      <option value="White">White</option>
-      <option value="Grey">Grey</option>
-      <option value="Core Black">Core Black</option>
-    </select>
+                <!-- Adidas Ultraboost -->
+                <div class="product">
+                    <img src="images/ultraboost.jpg" alt="Adidas Ultraboost" class="shoe-img">
 
-    <button onclick="addToCart('Adidas Ultraboost',2200, document.getElementById('ultraboost-color').value)">
-      Add to Cart
-    </button>
+                    <p>Adidas Ultraboost - P2200</p>
 
+                    <label for="ultraboost-color">Choose Color:</label>
 
-    <!-- Adidas Yeezy Boost 350 -->
-    <img src="images/yeezy350.jpg" class="shoe-img">
-    <p>Adidas Yeezy Boost 350 - P3500</p>
+                    <select id="ultraboost-color">
+                        <option value="Black">Black</option>
+                        <option value="White">White</option>
+                        <option value="Grey">Grey</option>
+                        <option value="Core Black">Core Black</option>
+                    </select>
 
-    <label>Choose Color:</label>
-    <select id="yeezy-color">
-      <option value="Zebra">Zebra</option>
-      <option value="Black Static">Black Static</option>
-      <option value="Cream">Cream</option>
-    </select>
+                    <button onclick="addToCart('Adidas Ultraboost', 2200, document.getElementById('ultraboost-color').value)">
+                        Add to Cart
+                    </button>
+                </div>
 
-    <button onclick="addToCart('Adidas Yeezy Boost 350',3500, document.getElementById('yeezy-color').value)">
-      Add to Cart
-    </button>
+                <!-- Adidas Yeezy Boost 350 -->
+                <div class="product">
+                    <img src="images/yeezy350.jpg" alt="Adidas Yeezy Boost 350" class="shoe-img">
 
-  </div>
+                    <p>Adidas Yeezy Boost 350 - P3500</p>
 
-</div>
-    </section>
+                    <label for="yeezy-color">Choose Color:</label>
+
+                    <select id="yeezy-color">
+                        <option value="Zebra">Zebra</option>
+                        <option value="Black Static">Black Static</option>
+                        <option value="Cream">Cream</option>
+                    </select>
+
+                    <button onclick="addToCart('Adidas Yeezy Boost 350', 3500, document.getElementById('yeezy-color').value)">
+                        Add to Cart
+                    </button>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
 
 </body>
 </html>
