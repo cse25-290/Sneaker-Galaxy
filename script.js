@@ -1,39 +1,61 @@
 let cart = [];
 let total = 0;
 
-function addToCart(name, price) {
-  cart.push({name, price});
-  total += price;
-  alert(name + " added to cart");
-}
+function addToCart(name, price){
 
-function openCart() {
-  document.getElementById("cart").style.display = "block";
-
-  let list = document.getElementById("cartItems");
-  list.innerHTML = "";
-
-  cart.forEach(item => {
-    let li = document.createElement("li");
-    li.textContent = item.name + " - P" + item.price;
-    list.appendChild(li);
+  cart.push({
+    name: name,
+    price: price
   });
 
-  document.getElementById("total").textContent = total;
+  total += price;
+
+  updateCart();
 }
 
-function goToCheckout() {
+function updateCart(){
+
+  const cartSection = document.getElementById("cart");
+  const cartItems = document.getElementById("cartItems");
+  const totalDisplay = document.getElementById("total");
+
+  cartSection.style.display = "block";
+
+  cartItems.innerHTML = "";
+
+  cart.forEach(item => {
+
+    let li = document.createElement("li");
+
+    li.textContent = item.name + " - P" + item.price;
+
+    cartItems.appendChild(li);
+
+  });
+
+  totalDisplay.textContent = total;
+}
+
+function openCart(){
+
+  document.getElementById("cart").style.display = "block";
+}
+
+function goToCheckout(){
+
   document.getElementById("checkout").style.display = "block";
 }
 
-function completePurchase() {
-  alert("Payment Successful! Thank you for shopping.");
+function completePurchase(){
+
+  alert("Purchase Successful 🚀");
 
   cart = [];
   total = 0;
 
-  document.getElementById("cartItems").innerHTML = "";
-  document.getElementById("total").textContent = "0";
+  updateCart();
+
+  document.getElementById("checkout").style.display = "none";
 }
 
 function openBrand(event, brandName) {
