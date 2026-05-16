@@ -50,237 +50,257 @@
     <button>Shop Now</button>
   </section>
 
-  <!-- BRANDS SECTION -->
-  <section class="section" id="brands">
+ <!-- BRANDS SECTION -->
+<section class="section" id="brands">
 
-    <h2>Sneaker Brands</h2>
+  <h2>Sneaker Brands</h2>
 
-    <!-- TAB BUTTONS -->
-    <div class="tabs">
+  <!-- TAB BUTTONS -->
+  <div class="tabs">
 
-      <button class="tab-button active"
-        onclick="openBrand(event, 'nike')">
-        Nike
+    <button class="tab-button active"
+      onclick="openBrand(event, 'nike')">
+      Nike
+    </button>
+
+    <button class="tab-button"
+      onclick="openBrand(event, 'adidas')">
+      Adidas
+    </button>
+
+    <button class="tab-button"
+      onclick="openBrand(event, 'puma')">
+      Puma
+    </button>
+
+    <button class="tab-button"
+      onclick="openBrand(event, 'newbalance')">
+      New Balance
+    </button>
+
+    <button class="tab-button"
+      onclick="openBrand(event, 'jordan')">
+      Jordan
+    </button>
+
+  </div>
+
+  <!-- NIKE -->
+  <div id="nike" class="tab-content active">
+
+    <div class="product-card">
+
+      <h3>Nike</h3>
+
+      <p><strong>Founded:</strong> 1964</p>
+
+      <p><strong>Founders:</strong>
+        Phil Knight & Bill Bowerman
+      </p>
+
+      <p><strong>Popular Sneakers:</strong>
+        Air Force 1, Air Max, Air Jordan
+      </p>
+
+      <p>
+        Nike is one of the world's biggest sportswear brands.
+      </p>
+
+      <h4>In Stock</h4>
+
+      <img src="images/airforce1.jpg" class="shoe-img">
+
+      <p>Nike Air Force 1 - P1500</p>
+
+      <button onclick="addToCart('Nike Air Force 1',1500)">
+        Add to Cart
       </button>
 
-      <button class="tab-button"
-        onclick="openBrand(event, 'adidas')">
-        Adidas
-      </button>
+      <img src="images/airmax90.jpg" class="shoe-img">
 
-      <button class="tab-button"
-        onclick="openBrand(event, 'puma')">
-        Puma
-      </button>
+      <p>Nike Air Max 90 - P1700</p>
 
-      <button class="tab-button"
-        onclick="openBrand(event, 'newbalance')">
-        New Balance
-      </button>
-
-      <button class="tab-button"
-        onclick="openBrand(event, 'jordan')">
-        Jordan
+      <button onclick="addToCart('Nike Air Max 90',1700)">
+        Add to Cart
       </button>
 
     </div>
 
-    <!-- NIKE -->
-    <div id="nike" class="tab-content active">
+  </div>
 
-      <div class="product-card">
+  <!-- ADIDAS -->
+  <div id="adidas" class="tab-content">
 
-        <h3>Nike</h3>
+    <div class="product-card">
 
-        <p><strong>Founded:</strong> 1964</p>
+      <h3>Adidas</h3>
 
-        <p><strong>Founders:</strong>
-          Phil Knight & Bill Bowerman
-        </p>
+      <p><strong>Founded:</strong> 1949</p>
 
-        <p><strong>Popular Sneakers:</strong>
-          Air Force 1, Air Max, Air Jordan
-        </p>
+      <p><strong>Founder:</strong>
+        Adolf Dassler
+      </p>
 
-        <h4>In Stock</h4>
+      <p><strong>Popular Sneakers:</strong>
+        Superstar, Stan Smith, Yeezy
+      </p>
 
-        <img src="images/airforce1.jpg" class="shoe-img">
+      <p>
+        Adidas is famous for sportswear and street fashion.
+      </p>
 
-        <p>Nike Air Force 1 - P1500</p>
+      <h4>In Stock</h4>
 
-        <button onclick="addToCart('Nike Air Force 1',1500)">
-          Add to Cart
-        </button>
+      <img src="images/superstar.jpg" class="shoe-img">
 
-        <img src="images/airmax90.jpg" class="shoe-img">
+      <p>Adidas Superstar - P1400</p>
 
-        <p>Nike Air Max 90 - P1700</p>
+      <button onclick="addToCart('Adidas Superstar',1400)">
+        Add to Cart
+      </button>
 
-        <button onclick="addToCart('Nike Air Max 90',1700)">
-          Add to Cart
-        </button>
+      <img src="images/stansmith.jpg" class="shoe-img">
 
-      </div>
+      <p>Adidas Stan Smith - P1600</p>
 
-    </div>
-
-    <!-- ADIDAS -->
-    <div id="adidas" class="tab-content">
-
-      <div class="product-card">
-
-        <h3>Adidas</h3>
-
-        <p><strong>Founded:</strong> 1949</p>
-
-        <p><strong>Founder:</strong>
-          Adolf Dassler
-        </p>
-
-        <p><strong>Popular Sneakers:</strong>
-          Superstar, Stan Smith, Yeezy
-        </p>
-
-        <h4>In Stock</h4>
-
-        <img src="images/superstar.jpg" class="shoe-img">
-
-        <p>Adidas Superstar - P1400</p>
-
-        <button onclick="addToCart('Adidas Superstar',1400)">
-          Add to Cart
-        </button>
-
-        <img src="images/stansmith.jpg" class="shoe-img">
-
-        <p>Adidas Stan Smith - P1600</p>
-
-        <button onclick="addToCart('Adidas Stan Smith',1600)">
-          Add to Cart
-        </button>
-
-      </div>
+      <button onclick="addToCart('Adidas Stan Smith',1600)">
+        Add to Cart
+      </button>
 
     </div>
 
-    <!-- PUMA -->
-    <div id="puma" class="tab-content">
+  </div>
 
-      <div class="product-card">
+  <!-- PUMA -->
+  <div id="puma" class="tab-content">
 
-        <h3>Puma</h3>
+    <div class="product-card">
 
-        <p><strong>Founded:</strong> 1948</p>
+      <h3>Puma</h3>
 
-        <p><strong>Founder:</strong>
-          Rudolf Dassler
-        </p>
+      <p><strong>Founded:</strong> 1948</p>
 
-        <p><strong>Popular Sneakers:</strong>
-          Suede Classic, RS-X
-        </p>
+      <p><strong>Founder:</strong>
+        Rudolf Dassler
+      </p>
 
-        <h4>In Stock</h4>
+      <p><strong>Popular Sneakers:</strong>
+        RS-X, Suede Classic
+      </p>
 
-        <img src="images/rsx.jpg" class="shoe-img">
+      <p>
+        Puma combines performance and fashion culture.
+      </p>
 
-        <p>Puma RS-X - P1300</p>
+      <h4>In Stock</h4>
 
-        <button onclick="addToCart('Puma RS-X',1300)">
-          Add to Cart
-        </button>
+      <img src="images/rsx.jpg" class="shoe-img">
 
-        <img src="images/suedeclassic.jpg" class="shoe-img">
+      <p>Puma RS-X - P1300</p>
 
-        <p>Puma Suede Classic - P1200</p>
+      <button onclick="addToCart('Puma RS-X',1300)">
+        Add to Cart
+      </button>
 
-        <button onclick="addToCart('Puma Suede Classic',1200)">
-          Add to Cart
-        </button>
+      <img src="images/suedeclassic.jpg" class="shoe-img">
 
-      </div>
+      <p>Puma Suede Classic - P1200</p>
 
-    </div>
-
-    <!-- NEW BALANCE -->
-    <div id="newbalance" class="tab-content">
-
-      <div class="product-card">
-
-        <h3>New Balance</h3>
-
-        <p><strong>Founded:</strong> 1906</p>
-
-        <p><strong>Founder:</strong>
-          William J. Riley
-        </p>
-
-        <p><strong>Popular Sneakers:</strong>
-          990 Series, 574
-        </p>
-
-        <h4>In Stock</h4>
-
-        <img src="images/nb574.jpg" class="shoe-img">
-
-        <p>New Balance 574 - P1800</p>
-
-        <button onclick="addToCart('New Balance 574',1800)">
-          Add to Cart
-        </button>
-
-        <img src="images/nb990.jpg" class="shoe-img">
-
-        <p>New Balance 990 - P2200</p>
-
-        <button onclick="addToCart('New Balance 990',2200)">
-          Add to Cart
-        </button>
-
-      </div>
+      <button onclick="addToCart('Puma Suede Classic',1200)">
+        Add to Cart
+      </button>
 
     </div>
 
-    <!-- JORDAN -->
-    <div id="jordan" class="tab-content">
+  </div>
 
-      <div class="product-card">
+  <!-- NEW BALANCE -->
+  <div id="newbalance" class="tab-content">
 
-        <h3>Jordan</h3>
+    <div class="product-card">
 
-        <p><strong>Founded:</strong> 1984</p>
+      <h3>New Balance</h3>
 
-        <p><strong>Founder:</strong>
-          Nike with Michael Jordan
-        </p>
+      <p><strong>Founded:</strong> 1906</p>
 
-        <p><strong>Popular Sneakers:</strong>
-          Air Jordan 1, Air Jordan 4, Air Jordan 11
-        </p>
+      <p><strong>Founder:</strong>
+        William J. Riley
+      </p>
 
-        <h4>In Stock</h4>
+      <p><strong>Popular Sneakers:</strong>
+        990 Series, 574
+      </p>
 
-        <img src="images/jordan1.jpg" class="shoe-img">
+      <p>
+        New Balance is known for comfort and quality.
+      </p>
 
-        <p>Air Jordan 1 - P2500</p>
+      <h4>In Stock</h4>
 
-        <button onclick="addToCart('Air Jordan 1',2500)">
-          Add to Cart
-        </button>
+      <img src="images/nb574.jpg" class="shoe-img">
 
-        <img src="images/jordan6.jpg" class="shoe-img">
+      <p>New Balance 574 - P1800</p>
 
-        <p>Air Jordan 6 - P3200</p>
+      <button onclick="addToCart('New Balance 574',1800)">
+        Add to Cart
+      </button>
 
-        <button onclick="addToCart('Air Jordan 6',3200)">
-          Add to Cart
-        </button>
+      <img src="images/nb990.jpg" class="shoe-img">
 
-      </div>
+      <p>New Balance 990 - P2200</p>
+
+      <button onclick="addToCart('New Balance 990',2200)">
+        Add to Cart
+      </button>
 
     </div>
 
-  </section>
+  </div>
+
+  <!-- JORDAN -->
+  <div id="jordan" class="tab-content">
+
+    <div class="product-card">
+
+      <h3>Jordan</h3>
+
+      <p><strong>Founded:</strong> 1984</p>
+
+      <p><strong>Founder:</strong>
+        Nike with Michael Jordan
+      </p>
+
+      <p><strong>Popular Sneakers:</strong>
+        Air Jordan 1, Air Jordan 4, Air Jordan 11
+      </p>
+
+      <p>
+        Jordan Brand became iconic in basketball culture.
+      </p>
+
+      <h4>In Stock</h4>
+
+      <img src="images/jordan1.jpg" class="shoe-img">
+
+      <p>Air Jordan 1 - P2500</p>
+
+      <button onclick="addToCart('Air Jordan 1',2500)">
+        Add to Cart
+      </button>
+
+      <img src="images/jordan6.jpg" class="shoe-img">
+
+      <p>Air Jordan 6 - P3200</p>
+
+      <button onclick="addToCart('Air Jordan 6',3200)">
+        Add to Cart
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
 
   <!-- FEATURED PRODUCTS -->
   <section class="section">
