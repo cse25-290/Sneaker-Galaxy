@@ -1,1 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Jordan</title>
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo">
+        🚀 <span class="sneaker">Sneaker</span>
+        <span class="galaxy">Galaxy</span>
+      </div>
+
+      <div class="search-bar">
+        <input type="text" placeholder="Search sneakers...">
+      </div>
+
+      <div>
+        <button onclick="openCart()">🛒 Cart</button>
+      </div>
+
+    </div>
+
+    <section>
+
+        <!-- JORDAN -->
+<div id="jordan" class="tab-content">
+
+  <div class="product-card">
+
+    <h3>Jordan</h3>
+
+    <p><strong>Founded:</strong> 1984</p>
+
+    <p><strong>Founder:</strong>
+      Nike with Michael Jordan
+    </p>
+
+    <p><strong>Popular Sneakers:</strong>
+      Air Jordan 1, Air Jordan 4, Air Jordan 6, Air Jordan 11
+    </p>
+
+    <p>
+      Jordan Brand became iconic in basketball culture.
+    </p>
+
+    <h4>In Stock</h4>
+
+    <!-- Air Jordan 1 -->
+    <img src="images/jordan1.jpg" class="shoe-img">
+    <p>Air Jordan 1 - P2500</p>
+
+    <label>Choose Color:</label>
+    <select id="jordan1-color">
+      <option value="Chicago">Chicago</option>
+      <option value="Bred">Bred</option>
+      <option value="Royal">Royal</option>
+    </select>
+
+    <button onclick="addToCart('Air Jordan 1',2500, document.getElementById('jordan1-color').value)">
+      Add to Cart
+    </button>
+
+
+    <!-- Air Jordan 4 -->
+    <img src="images/jordan4.jpg" class="shoe-img">
+    <p>Air Jordan 4 - P3000</p>
+
+    <label>Choose Color:</label>
+    <select id="jordan4-color">
+      <option value="White/Cement">White/Cement</option>
+      <option value="Black Cat">Black Cat</option>
+      <option value="Military Blue">Military Blue</option>
+    </select>
+
+    <button onclick="addToCart('Air Jordan 4',3000, document.getElementById('jordan4-color').value)">
+      Add to Cart
+    </button>
+
+
+    <!-- Air Jordan 6 -->
+    <img src="images/jordan6.jpg" class="shoe-img">
+    <p>Air Jordan 6 - P3200</p>
+
+    <label>Choose Color:</label>
+    <select id="jordan6-color">
+      <option value="Infrared">Infrared</option>
+      <option value="Black/Infrared">Black/Infrared</option>
+      <option value="White/Gold">White/Gold</option>
+    </select>
+
+    <button onclick="addToCart('Air Jordan 6',3200, document.getElementById('jordan6-color').value)">
+      Add to Cart
+    </button>
+
+
+    <!-- Air Jordan 11 -->
+    <img src="images/jordan11.jpg" class="shoe-img">
+    <p>Air Jordan 11 - P3500</p>
+
+    <label>Choose Color:</label>
+    <select id="jordan11-color">
+      <option value="Concord">Concord</option>
+      <option value="Bred">Bred</option>
+      <option value="Space Jam">Space Jam</option>
+    </select>
+
+    <button onclick="addToCart('Air Jordan 11',3500, document.getElementById('jordan11-color').value)">
+      Add to Cart
+    </button>
+
+  </div>
+
+</div>
+    </section>
+    </header>
+</body>
