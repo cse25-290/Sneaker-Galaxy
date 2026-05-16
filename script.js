@@ -1,12 +1,9 @@
 let cart = [];
 let total = 0;
 
-function addToCart(name, price){
-
-  cart.push({
-    name: name,
-    price: price
-  });
+function addToCart(name, price, color) {
+  console.log(name, price, color);
+}
 
   total += price;
 
