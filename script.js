@@ -2,7 +2,7 @@ let cart = [];
 let total = 0;
 
 function addToCart(name, price, color) {
-  console.log(name, price, color);
+    alert(`${name} (${color}) added to cart for P${price}`);
 }
 
   total += price;
@@ -33,9 +33,8 @@ function updateCart(){
   totalDisplay.textContent = total;
 }
 
-function openCart(){
-
-  document.getElementById("cart").style.display = "block";
+function openCart() {
+    alert("Cart opened!");
 }
 
 function goToCheckout(){
