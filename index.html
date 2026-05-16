@@ -1,264 +1,388 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<title>Sneaker Galaxy</title>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sneaker Galaxy</title>
+
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-<header>
-  <div class="top-bar">
-    <div class="logo">🚀 <span class="sneaker">Sneaker</span> <span class="galaxy">Galaxy</span></div>
+  <!-- HEADER -->
+  <header>
 
-    <div class="search-bar">
-      <input type="text" placeholder="Search...">
+    <div class="top-bar">
+
+      <div class="logo">
+        🚀 <span class="sneaker">Sneaker</span>
+        <span class="galaxy">Galaxy</span>
+      </div>
+
+      <div class="search-bar">
+        <input type="text" placeholder="Search sneakers...">
+      </div>
+
+      <div>
+        <button onclick="openCart()">🛒 Cart</button>
+      </div>
+
     </div>
 
-    <div>
-      <button onclick="openCart()">🛒 Cart</button>
-    </div>
-  </div>
+    <!-- NAVIGATION -->
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#brands">Brands</a></li>
+        <li><a href="#cart">Cart</a></li>
+        <li><a href="#checkout">Checkout</a></li>
+      </ul>
+    </nav>
 
-  <nav>
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#brands">Brands</a></li>
-      <li><a href="#checkout">Checkout</a></li>
-    </ul>
-  </nav>
-</header>
+  </header>
 
-<section class="hero">
-  <h1>Step Into The Galaxy</h1>
-  <button>Shop Now</button>
-</section>
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <h1>Step Into The Galaxy</h1>
+    <button>Shop Now</button>
+  </section>
 
-<!-- BRAND HISTORY SECTION -->
-<section class="section" id="brands">
-  <h2>Sneaker Brand History</h2>
+  <!-- BRANDS SECTION -->
+  <section class="section" id="brands">
 
- <div id="nike" class="tab-content active">
-    <div class="product-card">
-      <h3>Nike</h3>
-      <p><strong>Founded:</strong> 1964</p>
-      <p><strong>Founders:</strong> Phil Knight & Bill Bowerman</p>
-      <p><strong>Popular Sneakers:</strong> Air Force 1, Air Max, Air Jordan</p>
-      <p><strong>About:</strong> Nike is one of the biggest sportswear brands in the world known for innovation and athlete collaborations.</p>
-    </div>
-  </div>
+    <h2>Sneaker Brands</h2>
 
-  <div id="adidas" class="tab-content">
-    <div class="product-card">
-      <h3>Adidas</h3>
-      <p><strong>Founded:</strong> 1949</p>
-      <p><strong>Founder:</strong> Adolf Dassler</p>
-      <p><strong>Popular Sneakers:</strong> Superstar, Stan Smith, Yeezy</p>
-      <p><strong>About:</strong> Adidas is famous for its three-stripe design and combines sportswear with fashion culture.</p>
-    </div>
-  </div>
+    <!-- TAB BUTTONS -->
+    <div class="tabs">
 
-  <div id="puma" class="tab-content">
-    <div class="product-card">
-      <h3>Puma</h3>
-      <p><strong>Founded:</strong> 1948</p>
-      <p><strong>Founder:</strong> Rudolf Dassler</p>
-      <p><strong>Popular Sneakers:</strong> Suede Classic, RS-X</p>
-      <p><strong>About:</strong> Puma is known for stylish sportswear and collaborations with athletes and celebrities.</p>
-    </div>
-  </div>
+      <button class="tab-button active"
+        onclick="openBrand(event, 'nike')">
+        Nike
+      </button>
 
- <div id="newbalance" class="tab-content">
-    <div class="product-card">
-      <h3>New Balance</h3>
-      <p><strong>Founded:</strong> 1906</p>
-      <p><strong>Founder:</strong> William J. Riley</p>
-      <p><strong>Popular Sneakers:</strong> 990 Series, 574</p>
-      <p><strong>About:</strong> New Balance is respected for comfort, quality craftsmanship, and running shoes.</p>
-    </div>
-  </div>
+      <button class="tab-button"
+        onclick="openBrand(event, 'adidas')">
+        Adidas
+      </button>
 
- <div id="jordan" class="tab-content">
-    <div class="product-card">
-      <h3>Jordan</h3>
-      <p><strong>Founded:</strong> 1984</p>
-      <p><strong>Founder:</strong> Nike with Michael Jordan</p>
-      <p><strong>Popular Sneakers:</strong> Air Jordan 1, Air Jordan 4, Air Jordan 11</p>
-      <p><strong>About:</strong> Jordan Brand became one of the most iconic sneaker lines in basketball and streetwear culture.</p>
-    </div>
-  </div>
-</section>
-  <!-- TAB BUTTONS -->
-  <div class="tabs">
-    <button class="tab-button active" onclick="openBrand(event, 'nike')">Nike</button>
-    <button class="tab-button" onclick="openBrand(event, 'adidas')">Adidas</button>
-    <button class="tab-button" onclick="openBrand(event, 'puma')">Puma</button>
-    <button class="tab-button" onclick="openBrand(event, 'newbalance')">New Balance</button>
-    <button class="tab-button" onclick="openBrand(event, 'jordan')">Jordan</button>
-  </div>
+      <button class="tab-button"
+        onclick="openBrand(event, 'puma')">
+        Puma
+      </button>
 
- <!-- NIKE -->
-<div id="nike" class="tab-content active">
-  <div class="product-card">
+      <button class="tab-button"
+        onclick="openBrand(event, 'newbalance')">
+        New Balance
+      </button>
 
-    <h4>Nike</h4>
+      <button class="tab-button"
+        onclick="openBrand(event, 'jordan')">
+        Jordan
+      </button>
 
-    <h5>In Stock</h5>
-
-    <img src="images/airforce1.jpg" class="shoe-img">
-    <p>Nike Air Force 1 - P1500</p>
-    <button onclick="addToCart('Nike Air Force 1',1500)">
-      Add to Cart
-    </button>
-
-    <img src="images/airmax90.jpg" class="shoe-img">
-    <p>Nike Air Max 90 - P1700</p>
-    <button onclick="addToCart('Nike Air Max 90',1700)">
-      Add to Cart
-    </button>
-
-  </div>
-</div>
-
-<!-- ADIDAS -->
-<div id="adidas" class="tab-content">
-  <div class="product-card">
-
-    <h4>Adidas</h4>
-
-    <h5>In Stock</h5>
-
-    <img src="images/superstar.jpg" class="shoe-img">
-    <p>Adidas Superstar - P1400</p>
-    <button onclick="addToCart('Adidas Superstar',1400)">
-      Add to Cart
-    </button>
-
-    <img src="images/stansmith.jpg" class="shoe-img">
-    <p>Adidas Stan Smith - P1600</p>
-    <button onclick="addToCart('Adidas Stan Smith',1600)">
-      Add to Cart
-    </button>
-
-  </div>
-</div>
-
-<!-- PUMA -->
-<div id="puma" class="tab-content">
-  <div class="product-card">
-
-    <h4>Puma</h4>
-
-    <h5>In Stock</h5>
-
-    <img src="images/rsx.jpg" class="shoe-img">
-    <p>Puma RS-X - P1300</p>
-    <button onclick="addToCart('Puma RS-X',1300)">
-      Add to Cart
-    </button>
-
-    <img src="images/suedeclassic.jpg" class="shoe-img">
-    <p>Puma Suede Classic - P1200</p>
-    <button onclick="addToCart('Puma Suede Classic',1200)">
-      Add to Cart
-    </button>
-
-  </div>
-</div>
-
-<!-- NEW BALANCE -->
-<div id="newbalance" class="tab-content">
-  <div class="product-card">
-
-    <h4>New Balance</h4>
-
-    <h5>In Stock</h5>
-
-    <img src="images/nb574.jpg" class="shoe-img">
-    <p>New Balance 574 - P1800</p>
-    <button onclick="addToCart('New Balance 574',1800)">
-      Add to Cart
-    </button>
-
-    <img src="images/nb990.jpg" class="shoe-img">
-    <p>New Balance 990 - P2200</p>
-    <button onclick="addToCart('New Balance 990',2200)">
-      Add to Cart
-    </button>
-
-  </div>
-</div>
-
-<!-- JORDAN -->
-<div id="jordan" class="tab-content">
-  <div class="product-card">
-
-    <h4>Jordan</h4>
-
-    <h5>In Stock</h5>
-
-    <img src="images/jordan1.jpg" class="shoe-img">
-    <p>Air Jordan 1 - P2500</p>
-    <button onclick="addToCart('Air Jordan 1',2500)">
-      Add to Cart
-    </button>
-
-    <img src="images/jordan6.jpg" class="shoe-img">
-    <p>Air Jordan 6 - P3200</p>
-    <button onclick="addToCart('Air Jordan 6',3200)">
-      Add to Cart
-    </button>
-
-  </div>
-</div>
-  
-<!-- PRODUCTS -->
-<section class="section">
-  <h2>Featured Sneakers</h2>
-  <div class="products">
-    <div class="product-card">
-      Nike Air Force 1<br>P1500<br>
-      <button onclick="addToCart('Nike Air Force 1',1500)">Add to Cart</button>
     </div>
 
-    <div class="product-card">
-      Adidas Superstar<br>P1400<br>
-      <button onclick="addToCart('Adidas Superstar',1400)">Add to Cart</button>
+    <!-- NIKE -->
+    <div id="nike" class="tab-content active">
+
+      <div class="product-card">
+
+        <h3>Nike</h3>
+
+        <p><strong>Founded:</strong> 1964</p>
+
+        <p><strong>Founders:</strong>
+          Phil Knight & Bill Bowerman
+        </p>
+
+        <p><strong>Popular Sneakers:</strong>
+          Air Force 1, Air Max, Air Jordan
+        </p>
+
+        <h4>In Stock</h4>
+
+        <img src="images/airforce1.jpg" class="shoe-img">
+
+        <p>Nike Air Force 1 - P1500</p>
+
+        <button onclick="addToCart('Nike Air Force 1',1500)">
+          Add to Cart
+        </button>
+
+        <img src="images/airmax90.jpg" class="shoe-img">
+
+        <p>Nike Air Max 90 - P1700</p>
+
+        <button onclick="addToCart('Nike Air Max 90',1700)">
+          Add to Cart
+        </button>
+
+      </div>
+
     </div>
 
-    <div class="product-card">
-      Puma RS-X<br>P1300<br>
-      <button onclick="addToCart('Puma RS-X',1300)">Add to Cart</button>
+    <!-- ADIDAS -->
+    <div id="adidas" class="tab-content">
+
+      <div class="product-card">
+
+        <h3>Adidas</h3>
+
+        <p><strong>Founded:</strong> 1949</p>
+
+        <p><strong>Founder:</strong>
+          Adolf Dassler
+        </p>
+
+        <p><strong>Popular Sneakers:</strong>
+          Superstar, Stan Smith, Yeezy
+        </p>
+
+        <h4>In Stock</h4>
+
+        <img src="images/superstar.jpg" class="shoe-img">
+
+        <p>Adidas Superstar - P1400</p>
+
+        <button onclick="addToCart('Adidas Superstar',1400)">
+          Add to Cart
+        </button>
+
+        <img src="images/stansmith.jpg" class="shoe-img">
+
+        <p>Adidas Stan Smith - P1600</p>
+
+        <button onclick="addToCart('Adidas Stan Smith',1600)">
+          Add to Cart
+        </button>
+
+      </div>
+
     </div>
-  </div>
-</section>
 
-<!-- CART SECTION -->
-<section class="section" id="cart" style="display:none;">
-  <h2>Your Cart</h2>
-  <ul id="cartItems"></ul>
-  <p><strong>Total: P<span id="total">0</span></strong></p>
-  <button onclick="goToCheckout()">Proceed to Checkout</button>
-</section>
+    <!-- PUMA -->
+    <div id="puma" class="tab-content">
 
-<!-- CHECKOUT -->
-<section class="section" id="checkout" style="display:none;">
-  <h2>Payment Details</h2>
+      <div class="product-card">
 
-  <input type="text" placeholder="Full Name"><br><br>
-  <input type="text" placeholder="Card Number"><br><br>
-  <input type="text" placeholder="Expiry Date"><br><br>
-  <input type="text" placeholder="CVV"><br><br>
+        <h3>Puma</h3>
 
-  <button onclick="completePurchase()">Pay Now</button>
-</section>
+        <p><strong>Founded:</strong> 1948</p>
 
-<footer>
-  <p>© Sneaker Galaxy</p>
-</footer>
+        <p><strong>Founder:</strong>
+          Rudolf Dassler
+        </p>
 
-<script src="script.js"></script>
+        <p><strong>Popular Sneakers:</strong>
+          Suede Classic, RS-X
+        </p>
+
+        <h4>In Stock</h4>
+
+        <img src="images/rsx.jpg" class="shoe-img">
+
+        <p>Puma RS-X - P1300</p>
+
+        <button onclick="addToCart('Puma RS-X',1300)">
+          Add to Cart
+        </button>
+
+        <img src="images/suedeclassic.jpg" class="shoe-img">
+
+        <p>Puma Suede Classic - P1200</p>
+
+        <button onclick="addToCart('Puma Suede Classic',1200)">
+          Add to Cart
+        </button>
+
+      </div>
+
+    </div>
+
+    <!-- NEW BALANCE -->
+    <div id="newbalance" class="tab-content">
+
+      <div class="product-card">
+
+        <h3>New Balance</h3>
+
+        <p><strong>Founded:</strong> 1906</p>
+
+        <p><strong>Founder:</strong>
+          William J. Riley
+        </p>
+
+        <p><strong>Popular Sneakers:</strong>
+          990 Series, 574
+        </p>
+
+        <h4>In Stock</h4>
+
+        <img src="images/nb574.jpg" class="shoe-img">
+
+        <p>New Balance 574 - P1800</p>
+
+        <button onclick="addToCart('New Balance 574',1800)">
+          Add to Cart
+        </button>
+
+        <img src="images/nb990.jpg" class="shoe-img">
+
+        <p>New Balance 990 - P2200</p>
+
+        <button onclick="addToCart('New Balance 990',2200)">
+          Add to Cart
+        </button>
+
+      </div>
+
+    </div>
+
+    <!-- JORDAN -->
+    <div id="jordan" class="tab-content">
+
+      <div class="product-card">
+
+        <h3>Jordan</h3>
+
+        <p><strong>Founded:</strong> 1984</p>
+
+        <p><strong>Founder:</strong>
+          Nike with Michael Jordan
+        </p>
+
+        <p><strong>Popular Sneakers:</strong>
+          Air Jordan 1, Air Jordan 4, Air Jordan 11
+        </p>
+
+        <h4>In Stock</h4>
+
+        <img src="images/jordan1.jpg" class="shoe-img">
+
+        <p>Air Jordan 1 - P2500</p>
+
+        <button onclick="addToCart('Air Jordan 1',2500)">
+          Add to Cart
+        </button>
+
+        <img src="images/jordan6.jpg" class="shoe-img">
+
+        <p>Air Jordan 6 - P3200</p>
+
+        <button onclick="addToCart('Air Jordan 6',3200)">
+          Add to Cart
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FEATURED PRODUCTS -->
+  <section class="section">
+
+    <h2>Featured Sneakers</h2>
+
+    <div class="products">
+
+      <div class="product-card">
+
+        <img src="images/airforce1.jpg" class="shoe-img">
+
+        <p>Nike Air Force 1</p>
+
+        <p>P1500</p>
+
+        <button onclick="addToCart('Nike Air Force 1',1500)">
+          Add to Cart
+        </button>
+
+      </div>
+
+      <div class="product-card">
+
+        <img src="images/superstar.jpg" class="shoe-img">
+
+        <p>Adidas Superstar</p>
+
+        <p>P1400</p>
+
+        <button onclick="addToCart('Adidas Superstar',1400)">
+          Add to Cart
+        </button>
+
+      </div>
+
+      <div class="product-card">
+
+        <img src="images/rsx.jpg" class="shoe-img">
+
+        <p>Puma RS-X</p>
+
+        <p>P1300</p>
+
+        <button onclick="addToCart('Puma RS-X',1300)">
+          Add to Cart
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CART -->
+  <section class="section" id="cart" style="display:none;">
+
+    <h2>Your Cart</h2>
+
+    <ul id="cartItems"></ul>
+
+    <p>
+      <strong>
+        Total: P<span id="total">0</span>
+      </strong>
+    </p>
+
+    <button onclick="goToCheckout()">
+      Proceed to Checkout
+    </button>
+
+  </section>
+
+  <!-- CHECKOUT -->
+  <section class="section" id="checkout" style="display:none;">
+
+    <h2>Payment Details</h2>
+
+    <input type="text" placeholder="Full Name">
+    <br><br>
+
+    <input type="text" placeholder="Card Number">
+    <br><br>
+
+    <input type="text" placeholder="Expiry Date">
+    <br><br>
+
+    <input type="text" placeholder="CVV">
+    <br><br>
+
+    <button onclick="completePurchase()">
+      Pay Now
+    </button>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© Sneaker Galaxy</p>
+  </footer>
+
+  <script src="script.js"></script>
+
 </body>
 </html>
