@@ -16,100 +16,133 @@
 
 <body>
 
-    <!-- HEADER -->
-    <header class="bg-dark text-white">
+   <!-- HEADER -->
+<header class="bg-dark text-white">
 
-        <div class="container py-3">
+    <div class="container py-3">
 
-            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
 
-                <!-- Logo -->
-                <div class="logo">
-                    🚀 <span class="sneaker">Sneaker</span>
-                    <span class="galaxy">Galaxy</span>
-                </div>
+            <!-- Logo -->
+            <div class="logo">
+                🚀 <span class="sneaker">Sneaker</span>
+                <span class="galaxy">Galaxy</span>
+            </div>
 
-                <!-- Search -->
-                <div class="w-50">
-                    <input type="text"
-                           class="form-control"
-                           placeholder="Search sneakers...">
-                </div>
+            <!-- Search -->
+            <div class="w-50">
+                <input type="text"
+                       class="form-control"
+                       placeholder="Search sneakers...">
+            </div>
 
-                <!-- Cart Button -->
-                <div>
-                    <button class="btn btn-warning"
-                            onclick="openCart()">
-                        🛒 Cart
-                    </button>
-                </div>
+            <!-- Cart -->
+            <div>
+                <button class="btn btn-warning"
+                        onclick="openCart()">
+
+                    🛒 Cart
+
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black border-top border-warning">
+
+        <div class="container">
+
+            <!-- Mobile Toggle -->
+            <button class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse"
+                 id="navbarNav">
+
+                <ul class="navbar-nav mx-auto gap-lg-3">
+
+                    <li class="nav-item">
+                        <a class="nav-link text-warning"
+                           href="index.html">
+
+                            Home
+
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-warning"
+                           href="nike.html">
+
+                            Nike
+
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-warning"
+                           href="jordan.html">
+
+                            Jordan
+
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-warning"
+                           href="puma.html">
+
+                            Puma
+
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-warning"
+                           href="adidas.html">
+
+                            Adidas
+
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-warning"
+                           href="newbalance.html">
+
+                            New Balance
+
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-warning"
+                           href="about.html">
+
+                            About
+
+                        </a>
+                    </li>
+
+                </ul>
 
             </div>
 
         </div>
 
-        <!-- NAVBAR -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-            <div class="container">
+    </nav>
 
-                <button class="navbar-toggler"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#navbarNav">
-
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse"
-                     id="navbarNav">
-
-                    <ul class="navbar-nav mx-auto">
-
-                        <li class="nav-item">
-                            <a class="nav-link active" href="index.html">Home</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="nike.html">Nike</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="jordan.html">Jordan</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="puma.html">Puma</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="newbalance.html">New Balance</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="adidas.html">Adidas</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html">About</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="#cart">Cart</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="#checkout">Checkout</a>
-                        </li>
-
-                    </ul>
-
-                </div>
-
-            </div>
-        </nav>
-
-    </header>
-
+</header>
     <!-- HERO SECTION -->
     <section class="hero">
 
