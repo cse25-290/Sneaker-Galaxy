@@ -69,6 +69,12 @@ function openBrand(event, brandName) {
   }
 
   document.getElementById(brandName).classList.add("active");
-
+    
   event.currentTarget.classList.add("active");
+
+fetch("navbar.html")
+    .then(res => res.text())
+    .then(data => {
+        document.getElementById("navbar").innerHTML = data;
+    });
 }
