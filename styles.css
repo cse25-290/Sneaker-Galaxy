@@ -65,6 +65,25 @@ nav a:hover {
     color: #ffd700;
 }
 
+.navbar {
+    background: #000 !important;
+    border-top: 2px solid #d4af37;
+}
+
+.nav-link {
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: #fff !important;
+    transform: scale(1.05);
+}
+
+.navbar-toggler {
+    border: 1px solid #d4af37;
+}
+
 .hero {
     text-align: center;
     padding: 80px 20px;
