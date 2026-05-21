@@ -19,48 +19,15 @@
 
 <body>
 
-    <header class="bg-dark text-white shadow">
+<!-- NAVBAR (DYNAMIC - FIX ADDED) -->
+<div id="navbar"></div>
 
-        <div class="container py-3">
+<!-- HEADER -->
+<header class="bg-dark text-white text-center py-5">
 
-            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+    <div class="container">
 
-                <div class="logo">
-                    🚀 <span class="sneaker">Sneaker</span>
-                    <span class="galaxy">Galaxy</span>
-                </div>
-
-                <div class="w-50">
-                    <input type="text"
-                           class="form-control"
-                           placeholder="Search sneakers...">
-                </div>
-
-                <div>
-                    <button class="btn btn-warning"
-                            onclick="openCart()">
-
-                        🛒 Cart
-
-                    </button>
-                </div>
-
-            </div>
-
-        </div>
-
-    </header>
-
-    <main class="container py-5">
-
-        <section id="nike"
-                 class="tab-content active">
-
-            <div class="product-card shadow">
-
-                <div class="text-center mb-5">
-
-                    <h1 class="fw-bold">
+        <h1 class="fw-bold">
                         Nike
                     </h1>
 
@@ -82,8 +49,10 @@
                         Nike is one of the world's biggest
                         sportswear brands.
                     </p>
+    </div>
+    </header>
 
-                </div>
+    <main class="container py-5">
 
                 <h2 class="text-center mb-4">
                     In Stock
@@ -466,6 +435,15 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- NAVBAR LOADER (IMPORTANT FIX) -->
+<script>
+fetch("navbar.html")
+    .then(res => res.text())
+    .then(data => {
+        document.getElementById("navbar").innerHTML = data;
+    });
+</script>
 
 </body>
 
