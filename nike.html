@@ -12,6 +12,26 @@
 
     <link rel="stylesheet" href="styles.css">
 
+    <!-- SMALL STYLE FIX FOR HORIZONTAL LAYOUT -->
+    <style>
+        .products-container {
+            display: flex;
+            overflow-x: auto;
+            gap: 16px;
+            padding-bottom: 10px;
+        }
+
+        .product-card {
+            min-width: 250px;
+            max-width: 250px;
+            flex: 0 0 auto;
+        }
+
+        .shoe-img {
+            height: 140px;
+            object-fit: cover;
+        }
+    </style>
 </head>
 
 <body>
