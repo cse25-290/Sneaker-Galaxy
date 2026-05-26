@@ -1,80 +1,169 @@
-let cart = [];
+// Load cart from localStorage
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
 let total = 0;
 
+// Calculate total on page load
+cart.forEach(item => {
+    total += item.price;
+});
+
+// Update cart immediately
+updateCart();
+
 function addToCart(name, price, color) {
+
+    cart.push({
+        name,
+        price,
+        color
+    });
+
+    total += price;
+
+    // Save to localStorage
+    localStorage.setItem(
+        "cart",
+        JSON.stringify(cart)
+    );
+
+    updateCart();
+
     alert(`${name} (${color}) added to cart for P${price}`);
 }
 
-  total += price;
+function updateCart() {
 
-  updateCart();
-}
+    // Cart counter
+    let count = document.getElementById("cart-count");
 
-function updateCart(){
+    if (count) {
+        count.innerText = cart.length;
+    }
 
-  const cartSection = document.getElementById("cart");
-  const cartItems = document.getElementById("cartItems");
-  const totalDisplay = document.getElementById("total");
+    const cartSection =
+        document.getElementById("cart");
 
-  cartSection.style.display = "block";
+    const cartItems =
+        document.getElementById("cartItems");
 
-  cartItems.innerHTML = "";
+    const totalDisplay =
+        document.getElementById("total");
 
-  cart.forEach(item => {
+    if (cartSection) {
+        cartSection.style.display = "block";
+    }
 
-    let li = document.createElement("li");
+    if (cartItems) {
 
-    li.textContent = item.name + " - P" + item.price;
+        cartItems.innerHTML = "";
 
-    cartItems.appendChild(li);
+        cart.forEach(item => {
 
-  });
+            let li =
+                document.createElement("li");
 
-  totalDisplay.textContent = total;
+            li.textContent =
+                `${item.name} (${item.color}) - P${item.price}`;
+
+            cartItems.appendChild(li);
+
+        });
+    }
+
+    if (totalDisplay) {
+        totalDisplay.textContent = total;
+    }
 }
 
 function openCart() {
-    alert("Cart opened!");
+
+    const cartSection =
+        document.getElementById("cart");
+
+    if (cartSection) {
+        cartSection.style.display = "block";
+    }
 }
 
-function goToCheckout(){
+function goToCheckout() {
 
-  document.getElementById("checkout").style.display = "block";
+    const checkout =
+        document.getElementById("checkout");
+
+    if (checkout) {
+        checkout.style.display = "block";
+    }
 }
 
-function completePurchase(){
+function completePurchase() {
 
-  alert("Purchase Successful 🚀");
+    alert("Purchase Successful 🚀");
 
-  cart = [];
-  total = 0;
+    cart = [];
+    total = 0;
 
-  updateCart();
+    localStorage.removeItem("cart");
 
-  document.getElementById("checkout").style.display = "none";
+    updateCart();
+
+    const checkout =
+        document.getElementById("checkout");
+
+    if (checkout) {
+        checkout.style.display = "none";
+    }
 }
 
 function openBrand(event, brandName) {
 
-  let tabContents = document.getElementsByClassName("tab-content");
+    let tabContents =
+        document.getElementsByClassName(
+            "tab-content"
+        );
 
-  for (let i = 0; i < tabContents.length; i++) {
-    tabContents[i].classList.remove("active");
-  }
+    for (
+        let i = 0;
+        i < tabContents.length;
+        i++
+    ) {
+        tabContents[i]
+            .classList
+            .remove("active");
+    }
 
-  let tabButtons = document.getElementsByClassName("tab-button");
+    let tabButtons =
+        document.getElementsByClassName(
+            "tab-button"
+        );
 
-  for (let i = 0; i < tabButtons.length; i++) {
-    tabButtons[i].classList.remove("active");
-  }
+    for (
+        let i = 0;
+        i < tabButtons.length;
+        i++
+    ) {
+        tabButtons[i]
+            .classList
+            .remove("active");
+    }
 
-  document.getElementById(brandName).classList.add("active");
-    
-  event.currentTarget.classList.add("active");
+    document
+        .getElementById(brandName)
+        .classList
+        .add("active");
 
-fetch("navbar.html")
-    .then(res => res.text())
-    .then(data => {
-        document.getElementById("navbar").innerHTML = data;
-    });
+    event.currentTarget
+        .classList
+        .add("active");
 }
+
+// Load navbar
+fetch("navbar.html")
+.then(res => res.text())
+.then(data => {
+    let navbar =
+        document.getElementById("navbar");
+
+    if (navbar) {
+        navbar.innerHTML = data;
+    }
+});
