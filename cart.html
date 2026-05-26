@@ -5,50 +5,58 @@
 
 <title>Sneaker Galaxy Cart</title>
 
-<link
-rel="stylesheet"
-href="style.css">
-
-</head>
-
-<body>
+<link rel="stylesheet" href="style.css">
 
 <style>
 
 body{
-font-family:Arial;
-margin:0;
+font-family: Arial, sans-serif;
+padding:20px;
 }
 
 header{
-background:black;
-color:white;
+text-align:center;
+margin-bottom:30px;
+}
+
+.card{
+background:white;
 padding:20px;
-display:flex;
-justify-content:space-between;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.2);
+max-width:500px;
+margin:auto;
 }
 
-nav a{
-color:white;
-margin:10px;
-text-decoration:none;
-}
-
-button{
-background:#0d6efd;
-color:white;
-
-border:none;
-
+.form-control{
+width:100%;
 padding:10px;
+margin-bottom:15px;
+box-sizing:border-box;
+}
 
+.btn{
+padding:12px 20px;
+border:none;
 cursor:pointer;
+border-radius:6px;
 }
 
-.shoe{
-padding:20px;
+.btn-primary{
+background:#007bff;
+color:white;
 }
+
+#checkout{
+display:none;
+margin-top:30px;
+}
+
 </style>
+
+</head>
+
+<body>
 
 <header>
 
@@ -56,13 +64,67 @@ padding:20px;
 
 </header>
 
+<!-- CART ITEMS -->
 <div id="cart-items"></div>
 
 <h2 id="total"></h2>
 
-<button onclick="checkout()">
+<button class="btn btn-primary"
+onclick="showCheckout()">
 Checkout
 </button>
+
+<!-- CHECKOUT SECTION -->
+<section id="checkout">
+
+<div class="card">
+
+<h2>Payment Details</h2>
+
+<form>
+
+<input
+type="text"
+class="form-control"
+id="fullname"
+placeholder="Full Name"
+required>
+
+<input
+type="text"
+class="form-control"
+id="card"
+placeholder="Card Number"
+required>
+
+<input
+type="text"
+class="form-control"
+id="expiry"
+placeholder="Expiry Date"
+required>
+
+<input
+type="text"
+class="form-control"
+id="cvv"
+placeholder="CVV"
+required>
+
+<button
+type="button"
+class="btn btn-primary"
+onclick="completePurchase()">
+
+Pay Now
+
+</button>
+
+</form>
+
+</div>
+
+</section>
 
 <script>
 
@@ -96,17 +158,82 @@ document.getElementById(
 ).innerHTML=
 "Total: P"+total;
 
-function checkout(){
+
+// SHOW CHECKOUT FORM
+function showCheckout(){
+
+if(cart.length===0){
 
 alert(
-"Order placed!"
+"Your cart is empty!"
+);
+
+return;
+
+}
+
+document
+.getElementById(
+"checkout"
+)
+.style.display=
+"block";
+
+}
+
+
+// COMPLETE PURCHASE
+function completePurchase(){
+
+let name =
+document
+.getElementById(
+"fullname"
+).value;
+
+let card =
+document
+.getElementById(
+"card"
+).value;
+
+let expiry =
+document
+.getElementById(
+"expiry"
+).value;
+
+let cvv =
+document
+.getElementById(
+"cvv"
+).value;
+
+if(
+!name ||
+!card ||
+!expiry ||
+!cvv
+){
+
+alert(
+"Please fill all payment fields."
+);
+
+return;
+
+}
+
+alert(
+"Payment successful! Thank you for shopping at Sneaker Galaxy 🚀"
 );
 
 localStorage.removeItem(
 "cart"
 );
 
-location.reload();
+window.location.href=
+"index.html";
 
 }
 
